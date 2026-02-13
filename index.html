@@ -75,8 +75,33 @@
             border: none;
         }
 
+        .btn-link {
+            display: inline-block;
+            background: #00a8ff;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px auto;
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s;
+        }
+        
+        .btn-link:hover {
+            background: #0086c0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         @media print {
-            .btn-action { display: none; }
+            .btn-action, .btn-link, .button-group { display: none; }
             body { padding: 0; }
             .container { box-shadow: none; max-width: 100%; border-top: none; }
         }
@@ -140,8 +165,9 @@
         <p>Atuação em atividades organizacionais e suporte a eventos comunitários em instituição religiosa, desenvolvendo responsabilidade e proatividade.</p>
     </section>
 
-    <div style="text-align: center;">
+    <div class="button-group">
         <button class="btn-action" onclick="imprimir()">Gerar PDF para Envio</button>
+        <a href="https://drive.google.com/file/d/1DrJT3QC9UbJaRxVI9Wa2g4tiQP--Ofvf/view?usp=drive_link" target="_blank" class="btn-link">Ver Portfólio Completo</a>
     </div>
 </div>
 
@@ -152,6 +178,7 @@
 
     // Script para personalizar a saudação no console do navegador
     console.log("%c Currículo Digital - Sophia Rafaela ", "background: #1a2a6c; color: #fff; padding: 5px;");
+    console.log("%c Link do portfólio adicionado com sucesso!", "background: #00a8ff; color: #fff; padding: 3px;");
 </script>
 
 </body>
